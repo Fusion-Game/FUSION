@@ -2,52 +2,49 @@
 
 <img src="ASSETS/Fusion-GIF.gif" alt="FUSION-Animation" class="animation">
 
-<!--------------------------------- CSS ---------------------------------->
+<div class="rainbow-line"></div>
+
 <style>
-.animation {
-    width: 100vw;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 250px;
-    border-color: white;
-    border-radius: 5px;
-    border-width: 5px;
-    margin: 0;
-    padding: 0;
-    
-  }
+/* ... other styles ... */
 
 body {
-  background-image: linear-gradient(black, blue);
+  margin: 0;
+  padding: 0;
+}
+
+.animation {
+  width: 100vw;
+  height: 250px;
+  /* ... other styles ... */
 }
 
 .rainbow-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 5px;
-    width: 100%;
-    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-    background-size: 200% 100%;
-    animation: moveLeft 2s linear infinite;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  background-size: 200% 100%;
+  animation: moveLeft 2s linear infinite;
 }
 
- @keyframes moveLeft {
-    0% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; transform: translateX(-100%); }
+@keyframes moveLeft {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; transform: translateX(-100%); }
 }
 
- @keyframes moveRight {
-    0% { background-position: 0% 50%; transform: translateX(-100%); }
-    100% { background-position: 100% 50%; transform: translateX(100%); }
+@keyframes moveRight {
+  0% { background-position: 0% 50%; transform: translateX(-100%); }
+  100% { background-position: 100% 50%; }
 }
-</style> 
-<!----------------------------------------- JAVASCRIPT ---------------------------------->
+</style>
+
 <script>
 const leftDelay = Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000;
-   const rightDelay = Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000;
+const rightDelay = Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000;
 
-   const rainbowLine = document.querySelector('.rainbow-line');
-   rainbowLine.style.animation = `moveLeft 2s linear ${leftDelay}ms infinite, moveRight 2s linear ${rightDelay}ms infinite`;
+const rainbowLine = document.querySelector('.rainbow-line');
+rainbowLine.style.animation = `moveLeft 2s linear ${leftDelay}ms infinite`;
+rainbowLine.style.animation = `moveRight 2s linear ${rightDelay}ms infinite`;
 </script>
