@@ -22,26 +22,26 @@ body {
   background-image: linear-gradient(black, blue);
 }
 
-       .rainbow-line {
-           position: absolute;
-           bottom: 0;
-           left: 0;
-           height: 5px;
-           width: 100%;
-           background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-           background-size: 200% 100%;
-           animation: moveLeft 2s linear infinite;
-       }
+.rainbow-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    background-size: 200% 100%;
+    animation: moveLeft 2s linear infinite;
+}
 
-       @keyframes moveLeft {
-           0% { background-position: 100% 50%; }
-           100% { background-position: 0% 50%; transform: translateX(-100%); }
-       }
+ @keyframes moveLeft {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; transform: translateX(-100%); }
+}
 
-       @keyframes moveRight {
-           0% { background-position: 0% 50%; transform: translateX(-100%); }
-           100% { background-position: 100% 50%; transform: translateX(100%); }
-       }
+ @keyframes moveRight {
+    0% { background-position: 0% 50%; transform: translateX(-100%); }
+    100% { background-position: 100% 50%; transform: translateX(100%); }
+}
 </style> 
 <!----------------------------------------- JAVASCRIPT ---------------------------------->
 <script>
